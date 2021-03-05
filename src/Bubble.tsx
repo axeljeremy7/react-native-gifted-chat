@@ -519,7 +519,7 @@ export default class Bubble<
         <View
           style={[
             styles[position].wrapper,
-             this.styledBubbleToNext(),
+            this.styledBubbleToNext(),
             this.styledBubbleToPrevious(),
             wrapperStyle && wrapperStyle[position],
           ]}
