@@ -2,8 +2,7 @@
   "name": "react-native-gifted-chat",
   "version": "0.16.3",
   "description": "The most complete chat UI for React Native",
-  "main": "src/index.js",
-  "types": "lib/index.d.ts",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/axeljeremy7/react-native-gifted-chat.git"
@@ -25,12 +24,9 @@
   },
   "homepage": "https://github.com/FaridSafi/react-native-gifted-chat#readme",
   "scripts": {
-    "config:dev": "json -I -f package.json -e 'this.main=\"node_modules/expo/AppEntry.js\"'",
-    "config:npm": "json -I -f package.json -e 'this.main=\"lib/index.js\"'",
     "lint": "tslint --project .",
     "lint:fix": "./node_modules/.bin/tslint ./src/**/*.{ts,tsx} --fix",
     "tsc": "node_modules/.bin/tsc --noEmit",
-    "start": "yarn config:dev && expo start",
     "start:web": "yarn config:dev && expo start -w --dev",
     "build": "rm -rf lib/ && node_modules/.bin/tsc && cp flow-typedefs/*.js.flow lib/",
     "test": "TZ=Europe/Paris jest --no-watchman",
