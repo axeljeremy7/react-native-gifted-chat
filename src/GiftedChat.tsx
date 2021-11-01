@@ -729,7 +729,7 @@ class GiftedChat<TMessage extends IMessage = IMessage> extends React.Component<
     if (enableEmptyText && messages.length === 0) {
       if (this.props.onSend) {
         this.props.onSend()
-        return;
+        return
       }
     }
     const newMessages: TMessage[] = messages.map(message => {
