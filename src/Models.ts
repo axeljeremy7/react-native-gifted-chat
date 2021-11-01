@@ -30,6 +30,7 @@ export interface LeftRightStyle<T> {
   right?: StyleProp<T>
 }
 type renderFunction = (x: any) => JSX.Element
+
 export interface User {
   _id: string | number
   name?: string
