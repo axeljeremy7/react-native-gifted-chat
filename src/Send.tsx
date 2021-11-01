@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 })
 
 export interface SendProps<TMessage extends IMessage> {
-  enableEmptyText?: boolean;
+  enableEmptyText?: boolean
   text?: string
   label?: string
   containerStyle?: StyleProp<ViewStyle>
@@ -43,7 +43,7 @@ export interface SendProps<TMessage extends IMessage> {
   onSend?(
     messages: Partial<TMessage> | Partial<TMessage>[],
     shouldResetInputToolbar: boolean,
-    enableEmptyText?: boolean
+    enableEmptyText?: boolean,
   ): void
 }
 
@@ -76,10 +76,9 @@ export default class Send<
 
   handleOnPress = () => {
     const { text, onSend, enableEmptyText } = this.props
-    if(enableEmptyText && onSend && !text){
+    if (enableEmptyText && onSend && !text) {
       onSend([], true, true)
-    }
-    else if (text && onSend) {
+    } else if (text && onSend) {
       onSend({ text: text.trim() } as Partial<TMessage>, true)
     }
   }

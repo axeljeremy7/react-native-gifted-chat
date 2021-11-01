@@ -718,11 +718,15 @@ class GiftedChat<TMessage extends IMessage = IMessage> extends React.Component<
     )
   }
 
-  onSend = (messages: TMessage[] = [], shouldResetInputToolbar = false, enableEmptyText?: boolean) => {
+  onSend = (
+    messages: TMessage[] = [],
+    shouldResetInputToolbar = false,
+    enableEmptyText?: boolean,
+  ) => {
     if (!Array.isArray(messages)) {
       messages = [messages]
     }
-    if(enableEmptyText && messages.length === 0){
+    if (enableEmptyText && messages.length === 0) {
       if (this.props.onSend) {
         this.props.onSend()
       }
@@ -920,7 +924,6 @@ const styles = StyleSheet.create({
   },
 })
 
-
 export {
   GiftedChat,
   Actions,
@@ -939,5 +942,5 @@ export {
   Time,
   GiftedAvatar,
   utils,
-  models
+  models,
 }
