@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   },
   primary: {
     flexDirection: 'row',
-    alignItems: 'flex-end',
   },
   accessory: {
     height: 44,

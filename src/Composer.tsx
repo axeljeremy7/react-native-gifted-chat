@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     fontSize: 16,
     lineHeight: 16,
+    minHeight: 28,
     ...Platform.select({
       web: {
         paddingTop: 6,
@@ -80,7 +81,7 @@ export default class Composer extends React.Component<
   }
 
   state = {
-    height: 48,
+    height: 28,
   }
 
   layout?: { width: number; height: number } = undefined
