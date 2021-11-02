@@ -45,7 +45,7 @@ export interface ComposerProps {
   onInputSizeChanged?(layout: { width: number; height: number }): void
 }
 
-export default class Composer extends React.Component<ComposerProps> {
+export default class Composer extends React.Component<ComposerProps, {height: number}> {
   static defaultProps = {
     composerHeight: MIN_COMPOSER_HEIGHT,
     text: '',
@@ -74,6 +74,10 @@ export default class Composer extends React.Component<ComposerProps> {
     textInputStyle: StylePropType,
     textInputAutoFocus: PropTypes.bool,
     keyboardAppearance: PropTypes.string,
+  }
+
+  state = {
+    height: 48
   }
 
   layout?: { width: number; height: number } = undefined
@@ -126,7 +130,17 @@ export default class Composer extends React.Component<ComposerProps> {
               },
             }),
           },
+          { height: this.state.height },
         ]}
+        onContentSizeChange={e => {
+          if (
+            e.nativeEvent &&
+            e.nativeEvent.contentSize &&
+            !!e.nativeEvent.contentSize.height
+          ) {
+            this.setState({ height: e.nativeEvent.contentSize.height })
+          }
+        }}
         autoFocus={this.props.textInputAutoFocus}
         value={this.props.text}
         enablesReturnKeyAutomatically

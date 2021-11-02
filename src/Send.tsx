@@ -16,15 +16,15 @@ import { StylePropType } from './utils'
 
 const styles = StyleSheet.create({
   container: {
-    height: 44,
-    justifyContent: 'flex-end',
+    height: 'auto',
+    justifyContent: 'center',
   },
   text: {
     color: Color.defaultBlue,
     fontWeight: '600',
-    fontSize: 17,
+    fontSize: 16,
     backgroundColor: Color.backgroundTransparent,
-    marginBottom: 12,
+    // marginBottom: 12,
     marginLeft: 10,
     marginRight: 10,
   },
