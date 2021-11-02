@@ -45,7 +45,10 @@ export interface ComposerProps {
   onInputSizeChanged?(layout: { width: number; height: number }): void
 }
 
-export default class Composer extends React.Component<ComposerProps, {height: number}> {
+export default class Composer extends React.Component<
+  ComposerProps,
+  { height: number }
+> {
   static defaultProps = {
     composerHeight: MIN_COMPOSER_HEIGHT,
     text: '',
@@ -77,7 +80,7 @@ export default class Composer extends React.Component<ComposerProps, {height: nu
   }
 
   state = {
-    height: 48
+    height: 48,
   }
 
   layout?: { width: number; height: number } = undefined
