@@ -81,7 +81,7 @@ export default class Composer extends React.Component<
   }
 
   state = {
-    height: 28,
+    height: 40,
   }
 
   layout?: { width: number; height: number } = undefined
@@ -134,7 +134,7 @@ export default class Composer extends React.Component<
               },
             }),
           },
-          { height: this.state.height },
+          { height: !this.props.text ? 40 : this.state.height },
         ]}
         onContentSizeChange={e => {
           if (
