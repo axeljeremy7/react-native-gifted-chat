@@ -485,19 +485,19 @@ export default class Bubble<
   renderBubbleContent() {
     return this.props.isCustomViewBottom ? (
       <View>
+        {this.renderMessageText()}
         {this.renderMessageImage()}
         {this.renderMessageVideo()}
         {this.renderMessageAudio()}
-        {this.renderMessageText()}
         {this.renderCustomView()}
       </View>
     ) : (
       <View>
+        {this.renderMessageText()}
         {this.renderCustomView()}
         {this.renderMessageImage()}
         {this.renderMessageVideo()}
         {this.renderMessageAudio()}
-        {this.renderMessageText()}
       </View>
     )
   }
